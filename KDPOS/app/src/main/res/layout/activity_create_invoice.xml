@@ -1,0 +1,165 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:id="@+id/invoiceRoot"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="30dp"
+            android:orientation="vertical"
+            >
+
+            <EditText android:layout_width="fill_parent"
+                android:inputType="textCapSentences"
+                android:layout_height="40dp"
+                android:hint="@string/customerName"
+                android:background="@drawable/editelipse"
+                android:paddingLeft="5dp"
+                android:layout_marginTop="30dp"/>
+            <EditText android:layout_width="fill_parent"
+                android:inputType="textEmailAddress"
+                android:layout_height="40dp"
+                android:hint="@string/email"
+                android:background="@drawable/editelipse"
+                android:paddingLeft="5dp"
+                android:layout_marginTop="15dp"/>
+
+            <EditText android:layout_width="fill_parent"
+                android:inputType="number"
+                android:layout_height="40dp"
+                android:hint="@string/mobileNumber"
+                android:background="@drawable/editelipse"
+                android:paddingLeft="5dp"
+                android:layout_marginTop="15dp"/>
+
+            <EditText android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:hint="@string/location"
+                android:background="@drawable/editelipse"
+                android:paddingLeft="5dp"
+                android:inputType="text"
+                android:ems="10"
+                android:layout_marginTop="15dp"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/paymentType"
+                    android:id="@+id/txtPaymentType"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="10dp"
+                    android:textColor="@color/abc_primary_text_disable_only_material_light" />
+
+
+                <Space
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.15" />
+
+                <Spinner
+                    android:id="@+id/paymentType"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:background="#F3F3F3"
+                    android:paddingLeft="5dp"
+                    android:layout_weight="0.50"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+            <EditText android:layout_width="250dp"
+                android:id="@+id/txtDate"
+                android:layout_height="40dp"
+                android:hint="@string/Date"
+                android:background="@drawable/editelipse"
+                android:paddingLeft="5dp"
+                android:layout_marginTop="15dp"
+
+                android:inputType="date" />
+                <Space
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.15" />
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:layout_marginTop="18dp"
+                    android:background="@drawable/ic_calendar"
+                    android:onClick="setDate"
+                    android:contentDescription="@string/Calendar" />
+
+            </LinearLayout>
+            <EditText android:layout_width="match_parent"
+                android:id="@+id/txtInvoice"
+                android:hint="@string/Invoice"
+                android:layout_height="40dp"
+                android:background="#f3f3f3"
+                android:paddingLeft="5dp"
+                android:layout_marginTop="15dp"/>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:background="@drawable/submit_button"
+                    android:id="@+id/btnAddItems"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/Submit"
+                    android:textColor="#fff"
+
+                    />
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.15" />
+                <Button
+                    android:background="@drawable/submit_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/clearAll"
+                    android:textColor="#fff"
+                    android:onClick="clear"
+                    android:id="@+id/btnReset" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+</ScrollView>
